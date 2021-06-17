@@ -9,5 +9,14 @@ services:
     command: npm start
     volumes:
       - .:/app
-
-
+  
+  caddy:
+    image: caddy:latest
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./services/caddy/Caddyfiles:/etc/caddy/Caddyfile
+    depends_on:
+      - app

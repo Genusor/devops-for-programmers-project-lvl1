@@ -19,6 +19,5 @@ docker_build:
 docker_push:
 	docker push genusor/nodos
 
-
 docker_test_build:
-	docker run -e NODOS_HOST=0.0.0.0 -p 8080:8080 genusor/nodos:latest
+	docker run -e NODOS_HOST=0.0.0.0 -p 8080:8080 genusor/nodos:latest 
