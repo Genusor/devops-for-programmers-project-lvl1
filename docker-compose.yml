@@ -6,8 +6,6 @@ services:
       context: .
       dockerfile: Dockerfile.producton
     command: npm test
-    environment:
-      NODOS_DB_TYPE: ${NODOS_DB_TYPE}
     depends_on:
       - db
   db:
