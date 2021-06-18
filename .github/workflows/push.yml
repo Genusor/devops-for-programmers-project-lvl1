@@ -27,10 +27,7 @@ jobs:
         with:
           context: .
           file: Dockerfile.production
-          cache-from: type=registry,ref=${{ env.APP_IMAGE_NAME }}:cached
-          cache-to: type=inline
           push: true
-          tags: ${{ env.APP_IMAGE_NAME }}:cached
 
       - name: Run test
         run: make docker_test

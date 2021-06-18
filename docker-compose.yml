@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.producton
-    command: npm test
+    command: ["npm", "test"]
     depends_on:
       - db
   db:

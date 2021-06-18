@@ -11,7 +11,8 @@ compose_up:
 	docker-compose up --abort-on-container-exit
 
 docker_test:
-	docker run genusor/nodos
+	docker-compose -f docker-compose.yml build 
+        docker-compose -f docker-compose.yml up --abort-on-container-exit
 
 docker_build:
 	docker build . -f Dockerfile.production -t genusor/nodos:latest
