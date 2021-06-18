@@ -4,7 +4,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile.producton
+      dockerfile: Dockerfile.production
     command: ["npm", "test"]
     depends_on:
       - db
