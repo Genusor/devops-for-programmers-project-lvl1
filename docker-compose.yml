@@ -12,6 +12,5 @@ services:
     image: postgres:latest
     env_file: env.example
     environment:
-      POSTGRES_USER: ${NODOS_DB_USERNAME}
-      POSTGRES_PASSWORD: ${NODOS_DB_PASSWORD} 
+      POSTGRES_HOST_AUTH_METHOD: trust
    
