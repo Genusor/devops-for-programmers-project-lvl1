@@ -28,7 +28,7 @@ jobs:
           context: .
           file: Dockerfile.production
           push: true
-	  tags: ${{ env.APP_IMAGE_NAME}}
+	  tags: ${{ env.APP_IMAGE_NAME }}:cached
 
       - name: Run test
         run: make docker_test
