@@ -11,8 +11,8 @@ services:
   db:
     image: postgres:latest
     restart: always
-    env_file:
-     - .env
+#    env_file:
+#     - .env
     environment:
       - POSTGRES_DB=${NODOS_DB_HOSTNAME}
       - POSTGRES_USER=${NODOS_DB_USERNAME}
