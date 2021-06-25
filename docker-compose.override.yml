@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8080:8080
-    command: npm start
+    command: nodos server -h 0.0.0.0
     volumes:
       - .:/app
   

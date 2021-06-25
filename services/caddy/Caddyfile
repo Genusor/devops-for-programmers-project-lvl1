@@ -1,6 +1,6 @@
 localhost {
   log {
-    format single_field commom_log
+    format single_field common_log
   }
 
 

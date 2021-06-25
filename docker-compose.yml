@@ -5,12 +5,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.production
-    command: ["npm", "test"]
+    command: npm test 
     depends_on:
       - db
   db:
     image: postgres:latest
-    env_file: env.example
+    restart: always
+    env_file:
+     - .env
     environment:
-      POSTGRES_HOST_AUTH_METHOD: trust
-   
+      - POSTGRES_DB=${NODOS_DB_HOSTNAME}
+      - POSTGRES_USER=${NODOS_DB_USERNAME}
+      - POSTGRES_PASSWORD=${NODOS_DB_PASSWORD}
